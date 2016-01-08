@@ -1,1 +1,1 @@
-const path_to_libgunrock = ""
+const path_to_gunrock = ""
