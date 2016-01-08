@@ -7,6 +7,6 @@ function sssp(G::SparseMatrixCSC, root::Int)
     cols = map(Int32, cols)
 	vals = ones(Cint, edges)
     sssp_dist = Array(Cuint, nodes)
-	ccall((:sssp, "/home/ubuntu/gunrock2/build/lib/libgunrock"), Void, (Ptr{Cuint}, Int, Int, Ptr{Cint}, Ptr{Cint}, Ptr{Cint}, Int), sssp_dist, nodes, edges, rows, cols, vals, root - 1)
+	ccall((:sssp, path_to_gunrock), Void, (Ptr{Cuint}, Int, Int, Ptr{Cint}, Ptr{Cint}, Ptr{Cint}, Int), sssp_dist, nodes, edges, rows, cols, vals, root - 1)
 	sssp_dist
 end

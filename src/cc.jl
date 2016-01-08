@@ -6,7 +6,7 @@ function cc(G::SparseMatrixCSC, root::Int)
     rows = map(Int32, rows)
     cols = map(Int32, cols)
     conn_comp = Array(Int32, nodes)
-	num_cc = ccall((:bfs, "/home/ubuntu/gunrock2/build/lib/libgunrock"), Cint, (Ptr{Cint}, Int, Int, Ptr{Cint}, Ptr{Cint}, Int), conn_comp, nodes, edges, rows, cols, root - 1)
+	num_cc = ccall((:bfs, path_to_gunrock), Cint, (Ptr{Cint}, Int, Int, Ptr{Cint}, Ptr{Cint}, Int), conn_comp, nodes, edges, rows, cols, root - 1)
     conn_comp += 1
 	num_cc, conn_comp
 end
