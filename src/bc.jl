@@ -3,12 +3,12 @@ Computes node betweenness centrality from a given source.
 
 Input:
 -----
-G::SparseMatrixCSC
-root::Int
+* G::SparseMatrixCSC
+* root::Int
 
 Output:
 ------
-bc_scores::Vector{Float32}
+* bc_scores::Vector{Float32}
 
 """
 function bc(G::SparseMatrixCSC, root::Int)

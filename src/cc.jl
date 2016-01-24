@@ -3,12 +3,12 @@ Computes number of connected components and the component ID for every node.
 
 Input:
 -----
-G::SparseMatrixCSC
+* G::SparseMatrixCSC
 
 Output:
 ------
-num_cc ::Int32
-conn_comp::Vector{Int32}
+* num_cc ::Int32
+* conn_comp::Vector{Int32}
 
 """
 function cc(G::SparseMatrixCSC)

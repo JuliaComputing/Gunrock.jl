@@ -3,12 +3,12 @@ Computes BFS tree of a Graph from a given source. It returns the levels of each 
 
 Input:
 -----
-G::SparseMatrixCSC
-root::Int
+* G::SparseMatrixCSC
+* root::Int
 
 Output:
 ------
-bfs_labels::Vector{Int32}
+* bfs_labels::Vector{Int32}
 
 """
 function bfs(G::SparseMatrixCSC, root::Int)

@@ -3,12 +3,12 @@ Runs the pagerank algorithm on the given graph. It returns the nodes in the orde
 
 Input:
 -----
-G::SparseMatrixCSC
+* G::SparseMatrixCSC
 
 Output:
 ------
-top_nodes::Vector{Int32}
-top_ranks:;Vector{Float32}
+* top_nodes::Vector{Int32}
+* top_ranks:;Vector{Float32}
 
 """
 function pagerank(G::SparseMatrixCSC)
