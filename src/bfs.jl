@@ -1,3 +1,16 @@
+"""
+Computes BFS tree of a Graph from a given source. It returns the levels of each node with respect to source starting from level 1. 
+
+Input:
+-----
+G::SparseMatrixCSC
+root::Int
+
+Output:
+------
+bfs_labels::Vector{Int32}
+
+"""
 function bfs(G::SparseMatrixCSC, root::Int)
 	rows = G.colptr - 1
     cols = G.rowval - 1

@@ -1,3 +1,16 @@
+"""
+Computes number of connected components and the component ID for every node.
+
+Input:
+-----
+G::SparseMatrixCSC
+
+Output:
+------
+num_cc ::Int32
+conn_comp::Vector{Int32}
+
+"""
 function cc(G::SparseMatrixCSC)
 	rows = G.colptr - 1
     cols = G.rowval - 1
