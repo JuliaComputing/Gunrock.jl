@@ -5,5 +5,5 @@ module Gunrock
 	include("sssp.jl")
 	include("pagerank.jl")
 	include("bc.jl")
-	export bfs, cc, sssp, bc
+	export bfs, cc, sssp, bc, pagerank
 end
