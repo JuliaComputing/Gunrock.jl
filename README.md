@@ -33,3 +33,19 @@ cc(a)
 pagerank(a)
 sssp(a)
 ```
+
+## Performance
+Let's generate a 2D square 5-point mesh, using [Meshpart](https://github.com/JuliaSparse/Meshpart.jl) with 1 million nodes.
+```
+using Meshpart
+a = Meshpart.grid5(1000,1000)
+```
+We shall now perform a comparison with the [LightGraphs](https://github.com/JuliaGraphs/LightGraphs.jl) package for graph algorithms, which is a purely single-threaded CPU implementation. 
+```
+using LightGraphs
+g1 = Graph(a)
+g2 = DiGraph(a)
+```
+The following chart compares the performance of Gunrock with LightGraphs:
+
+![perf](https://cloud.githubusercontent.com/assets/9101377/12712098/a53bd896-c8eb-11e5-9219-bb0f15b7e757.png)
