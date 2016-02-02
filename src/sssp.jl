@@ -20,6 +20,6 @@ function sssp(G::SparseMatrixCSC, root::Int)
     cols = map(Int32, cols)
 	vals = ones(Cint, edges)
     sssp_dist = Array(Cuint, nodes)
-	ccall((:sssp, path_to_gunrock), Void, (Ptr{Cuint}, Int, Int, Ptr{Cint}, Ptr{Cint}, Ptr{Cint}, Int), sssp_dist, nodes, edges, rows, cols, vals, root - 1)
+	ccall((:sssp, gunrock_lib), Void, (Ptr{Cuint}, Int, Int, Ptr{Cint}, Ptr{Cint}, Ptr{Cint}, Int), sssp_dist, nodes, edges, rows, cols, vals, root - 1)
 	sssp_dist
 end

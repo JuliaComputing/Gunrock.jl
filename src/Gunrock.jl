@@ -1,5 +1,5 @@
 module Gunrock
-	include("consts.jl")
+    include("config.jl")
 	include("bfs.jl")
 	include("cc.jl")
 	include("sssp.jl")

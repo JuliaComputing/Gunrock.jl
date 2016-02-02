@@ -20,7 +20,7 @@ function pagerank(G::SparseMatrixCSC)
     cols = map(Int32, cols)
     top_nodes = Array(Int32, nodes)
     top_ranks = Array(Cfloat, nodes)
-	ccall((:pagerank, path_to_gunrock), Void, (Ptr{Cint}, Ptr{Cfloat}, Int, Int, Ptr{Cint}, Ptr{Cint}), top_nodes, top_ranks, nodes, edges, rows, cols)
+	ccall((:pagerank, gunrock_lib), Void, (Ptr{Cint}, Ptr{Cfloat}, Int, Int, Ptr{Cint}, Ptr{Cint}), top_nodes, top_ranks, nodes, edges, rows, cols)
     top_nodes += 1
 	top_nodes, top_ranks
 end

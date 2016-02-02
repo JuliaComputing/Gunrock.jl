@@ -19,7 +19,7 @@ function cc(G::SparseMatrixCSC)
     rows = map(Int32, rows)
     cols = map(Int32, cols)
     conn_comp = Array(Int32, nodes)
-	num_cc = ccall((:cc, path_to_gunrock), Cint, (Ptr{Cint}, Int, Int, Ptr{Cint}, Ptr{Cint}), conn_comp, nodes, edges, rows, cols)
+	num_cc = ccall((:cc, gunrock_lib), Cint, (Ptr{Cint}, Int, Int, Ptr{Cint}, Ptr{Cint}), conn_comp, nodes, edges, rows, cols)
     conn_comp += 1
 	num_cc, conn_comp
 end
