@@ -14,9 +14,9 @@ First, clone the Gunrock library and follow the instructions on how to build it 
 
 Add the location of `libgunrock.so` to your `LD_LIBRARY_PATH`. 
 
-Next, clone the package by doing:
+Next, install the package by doing:
 ```
-Pkg.clone("https://github.com/JuliaComputing/Gunrock.jl.git")
+Pkg.add("Gunrock")
 ```
 
 ## Basic Usage
@@ -49,3 +49,6 @@ g2 = DiGraph(a)
 The following chart compares the performance of Gunrock with LightGraphs:
 
 ![perf](https://cloud.githubusercontent.com/assets/9101377/12712098/a53bd896-c8eb-11e5-9219-bb0f15b7e757.png)
+
+### Note
+This release currently works only on Linux. Future releases will support Mac OSX and Windows. 
