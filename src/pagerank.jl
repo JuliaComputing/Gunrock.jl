@@ -1,3 +1,7 @@
+@require LightGraphs begin
+import LightGraphs: pagerank
+end
+
 """
 Runs the pagerank algorithm on the given graph. It returns the nodes in the order in which they are ranked, and their respective rank scores.
 
