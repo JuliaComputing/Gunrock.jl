@@ -1,6 +1,6 @@
 The Gunrock.jl package is licensed under the MIT "Expat" License:
 
-> Copyright (c) 2016: Ranjan Anantharaman.
+> Copyright (c) 2016: Julia Computing Inc.
 >
 > Permission is hereby granted, free of charge, to any person obtaining
 > a copy of this software and associated documentation files (the
